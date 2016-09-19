@@ -12,4 +12,7 @@ export HOME=/home/user
 
 mkdir ${HOME}/git
 
+# allow user to install gems
+chown -R user:user ${GEM_HOME}
+
 exec nginx -g "daemon off;"
