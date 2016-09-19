@@ -1,9 +1,16 @@
 This is a docker image with nginx to redirect the server application http calls
 to the linked docker containers, PostgreSQL database and to Elasticsearch search engine.
 
-To start a rails server use:
+For the first run of rails server use:
+
+    bundle install
+
+
+    rake db:insert-test-data
+
 
     rails server --port 3000 --bind 0.0.0.0
+
 
 
 # Commands
