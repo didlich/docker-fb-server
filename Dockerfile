@@ -16,7 +16,7 @@ RUN mkdir /etc/nginx/sites-enabled \
     && ln -s /etc/nginx/sites-available/elasticsearch /etc/nginx/sites-enabled/elasticsearch
 
 # fix missing files
-RUN touch /run/nginx/nginx.pid
+RUN mkdir -p /run/nginx && touch /run/nginx/nginx.pid
 
 # Specify Volume
 VOLUME ["/home/user/git"]
