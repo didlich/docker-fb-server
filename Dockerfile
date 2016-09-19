@@ -9,8 +9,8 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 
 # setup nginx configuration
-COPY nginx/nginx.conf /etc/nginx/
-COPY nginx/sites-available /etc/nginx/
+# will copy content of nginx
+ADD nginx /etc/nginx/
 
 RUN mkdir /etc/nginx/sites-enabled \
     && ln -s /etc/nginx/sites-available/elasticsearch /etc/nginx/sites-enabled/elasticsearch
